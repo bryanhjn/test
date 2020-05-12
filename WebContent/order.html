@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style type="text/css">
+	.title{
+		font-size:35px;
+		text-align:center;
+	}
+	
+	.layout{
+		display:flex;
+		flex-direction:column;
+		align-items:center;
+	}
+</style>
+<link rel="stylesheet" href="/file/layui/css/layui.css">
+</head>
+<body>
+	<form action="http://localhost:8080/bookstores/DoOrder" method="post">
+		<div class="layout">
+			<div class="title">请填写收件人信息</div>
+			<table lay-even class="layui-table">
+				<tr>
+					<td>用户名:</td>
+					<td><input type="text" name="username"/></td>
+				</tr>
+				<tr>
+					<td>邮编:</td>
+					<td><input type="number" name="zipcode"/></td>
+				</tr>
+				<tr>
+					<td>电话:</td>
+					<td><input type="number" name="phone"/></td>
+				</tr>
+				<tr>
+					<td>信用卡:</td>
+					<td><input type="number" name="creditcard"/></td>
+				</tr>
+			</table>
+			<div>
+				<input type="submit" value="提交" class="layui-btn layui-btn-radius" />
+				<input type="reset" value="重置" class="layui-btn layui-btn-radius layui-btn-danger" />
+			</div>
+		</div>
+	</form>
+		
+</body>
+</html>
